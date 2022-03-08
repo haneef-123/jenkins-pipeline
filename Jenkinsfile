@@ -11,7 +11,7 @@ pipeline {
 
         stage('test') {
           steps {
-            echo 'testing application'
+            echo '"testing application${ChromeDriverPath}"'
           }
         }
 
@@ -24,5 +24,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    ChromeDriverPath = '/Users/haneef/Downloads/'
   }
 }
